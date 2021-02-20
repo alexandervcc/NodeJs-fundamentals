@@ -1,0 +1,21 @@
+MONGOOSE
+    -validations, required, optionals, types of datas
+    -security as tasks owners
+    -conect to the db, and creates a model
+
+
+    1.Install mongoose 
+        ~: npm i mongoose
+
+DATA 
+    validation: equals to what is required
+    sanitization: transfrom to what is required
+
+    Install validation package
+    ~: npm i validator
+
+    
+ASYNC - AWAIT
+    -Work with Promises Easily
+    -How to manage code, when have many async thing sgoing on 
+    -

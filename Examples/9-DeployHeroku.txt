@@ -1,0 +1,40 @@
+Deploy Node to Production
+-Real URL to visit Website
+
+-Install Heroku CLi
+    ~: npm install -g heroku
+-Login to Heroku
+    ~: heroku login
+
+-Set up SSH public key with Heroku
+    ~: heroku key:add
+
+-Create App in Heroku
+    ~: heroku create cheems-server
+
+    Se general 2 URL:
+        1. URL viva para la aplicacion
+        2. URL del repositorio de github para empujar el codigo
+
+-Cambios para que Heroku sepa como ejecutar la aplicacion
+    -package.json
+        Que archivo debe ejecutar:
+              "scripts": {
+                "doge":"node src/app.js"
+                },
+
+                ~: npm run doge
+            
+    -src/app.js
+        el puerto de escucha, pero proveido por Heroku, a traves de una vriable de ambiente
+
+-Cambiar el fetch del frontend
+      fetch('/products?search='+par.value).then((res)=>{
+
+-Enviar a Heroku
+    ~: git init
+    ~: heroku git:remote -a cheems-server
+    ~$ git add .
+    ~$ git commit -am "make it better"
+    ~$ git push heroku master
+

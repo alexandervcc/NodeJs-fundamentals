@@ -1,0 +1,26 @@
+SSH
+-Forma segura de comunicacion con el servidor
+-Confirmar la existencia de llaves SSH:
+    ls -a -l ~/.ssh
+
+-Geenrate ssh key:
+    1. ssh-keygen -t rsa -b 4096 -C "cheemsServer"
+        t: type 
+        b: bits for en key
+        C: comment for the key
+    
+    2. Parameters:
+        (not fot now)
+
+    3. Verificar las llaves nuevamente:
+        id_rsa      ->  Llave secreta nunca compartida, solo local en el computador
+        id_rsa.pub  ->  Llave publica, para compartir con Gtihub y Heroku, para asegurar la conexion
+
+    4. Verificar que son utiles:
+        Empezar el agente SSH:
+            eval "$(ssh-agent -s"
+                #Agent: pid 6830
+        Registrar el archivo de llaves creados
+            ssh-add ~/.ssh/id_rsa
+
+
